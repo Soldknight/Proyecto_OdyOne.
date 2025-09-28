@@ -1,0 +1,232 @@
+/* ==================================== */
+/* 1. Base y Tipografía */
+/* ==================================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.65;
+    background: url("img/fondo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #495057; 
+    transition: background 0.5s, color 0.5s;
+    text-rendering: optimizeLegibility; 
+}
+
+/* Estilos de las secciones para dar un efecto de "tarjeta" flotante */
+section {
+    padding: 60px 40px; 
+    max-width: 1100px; 
+    margin: 40px auto; 
+    background: rgba(255, 255, 255, 0.95); 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; 
+    color: #8D001C; /* Rojo Borgoña, más profundo y elegante */
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Título de la app en la sección Hero (Añadido en el HTML) */
+.hero .titulo-app {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #333; 
+    margin-bottom: 5px;
+}
+
+/* ==================================== */
+/* 2. Encabezado (Header) */
+/* ==================================== */
+header {
+    background: rgba(255, 255, 255, 0.98); /* Fondo casi blanco con ligera transparencia */
+    border-bottom: 1px solid #f0f0f0; 
+    padding: 18px 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; /* Sticky para que la navegación se quede arriba */
+    top: 0;
+    z-index: 1000; 
+}
+
+.logo-pequeno {
+    height: 35px; /* Ligeramente más pequeño, más discreto */
+}
+
+header nav a {
+    color: #495057; 
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500; 
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #8D001C; /* Borgoña al pasar el mouse */
+}
+
+/* ==================================== */
+/* 3. Hero y Botones */
+/* ==================================== */
+.hero {
+    text-align: center;
+    padding: 100px 20px 80px; 
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem; 
+    margin-bottom: 25px;
+    color: #1a1a1a; 
+    line-height: 1.2;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    padding: 14px 35px; 
+    font-size: 1.05rem;
+    background: #E6B34A; /* Tono Dorado más elegante */
+    color: #333;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    letter-spacing: 0.5px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    background: #D4A744;
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ==================================== */
+/* 4. Servicios */
+/* ==================================== */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 30px;
+}
+
+.service {
+    background: #fdfdfd;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); 
+    border-left: 3px solid #E6B34A; /* Línea de acento elegante */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service strong {
+    color: #8D001C;
+    font-weight: 600;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================================== */
+/* 5. Formulario */
+/* ==================================== */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #8D001C;
+    box-shadow: 0 0 0 2px rgba(141, 0, 28, 0.1);
+    outline: none;
+}
+
+.contact-form button {
+    align-self: center; /* Centramos el botón del formulario */
+    margin-top: 10px;
+}
+
+/* ==================================== */
+/* 6. Footer y Accesibilidad */
+/* ==================================== */
+footer {
+    background: #212529; /* Negro muy oscuro, más elegante que el #333 */
+    color: #f8f9fa;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #E6B34A; /* Dorado para los enlaces del footer */
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+}
+
+/* Botón accesibilidad */
+.accesibilidad {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #8D001C;
+    color: white;
+    padding: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.accesibilidad:hover {
+    background: #A30021;
+    transform: rotate(10deg) scale(1.05); /* Movimiento más sutil */
+}
+
+/* Alto contraste */
+.contraste {
+    background-color: #000000 !important;
+    color: #f0f0f0 !important;
+}
+
+/* Animaciones scroll (Mantenidas) */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}

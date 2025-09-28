@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odyone App - Modelo de Negocio Inclusivo</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class="hidden">
+    <img src="img/Odyone-logo.png" alt="Logo Odyone App" class="logo-pequeno">
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#valor">Promesa de Valor</a>
+      <a href="#capacitacion">Capacitación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero hidden">
+    <h2 class="titulo-app">Odyone App</h2> 
+    <h1>Transformando comunidades a través de la inclusión laboral</h1>
+    <p>Conecta con especialistas en plomería, electricidad, carpintería y más. 
+      Odyone App es la plataforma que une talento local con hogares que necesitan soluciones accesibles.</p>
+    <button class="btn">Solicitar Servicio</button>
+  </section>
+
+  <section id="servicios" class="hidden">
+    <h2>Servicios</h2>
+    <p>Ofrecemos una variedad de servicios diseñados para resolver las necesidades del hogar con confianza y eficiencia.</p>
+    <div class="services">
+      <div class="service">🔧 <strong>Plomería</strong><br> Instalación y reparación de tuberías.</div>
+      <div class="service">💡 <strong>Electricidad</strong><br> Montaje e instalación eléctrica.</div>
+      <div class="service">🔨 <strong>Carpintería</strong><br> Diseño de muebles y acabados.</div>
+      <div class="service">🔑 <strong>Cerrajería</strong><br> Apertura de puertas y cerraduras.</div>
+      <div class="service">🧱 <strong>Albañilería</strong><br> Remodelación y construcción.</div>
+    </div>
+  </section>
+
+  <section id="valor" class="hidden">
+    <h2>Promesa de Valor</h2>
+    <p><strong>Para clientes:</strong> acceso rápido, precios justos, transparencia y confianza.</p>
+    <p><strong>Para trabajadores:</strong> capacitación, ingresos dignos, estabilidad y crecimiento.</p>
+  </section>
+
+  <section id="capacitacion" class="hidden">
+    <h2>Capacitación y Comunidad</h2>
+    <p>Brindamos formación constante en áreas técnicas y atención al cliente. Además, impulsamos proyectos comunitarios como pavimentación de calles y reforestación.</p>
+  </section>
+
+  <section id="contacto" class="hidden">
+    <h2>Contacto</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Tu nombre" aria-label="Nombre">
+      <input type="email" placeholder="Tu correo" aria-label="Correo electrónico">
+      <textarea rows="4" placeholder="Tu mensaje" aria-label="Mensaje"></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <footer class="hidden">
+    <p>&copy; 2025 Odyone App | Modelo de negocio inclusivo</p>
+    <p>
+      <a href="#">Facebook</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">Instagram</a>
+    </p>
+  </footer>
+
+  <div class="accesibilidad" onclick="toggleContrast()">🌓</div>
+
+  <script>
+    function toggleContrast() {
+      document.body.classList.toggle("contraste");
+    }
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    hiddenElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
